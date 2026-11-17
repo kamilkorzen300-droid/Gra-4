@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strzelanka pod Magazynami</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div id="loginScreen">
+    <div class="loginBox">
+      <h1>STRZELANKA</h1>
+      <h2>Pod Magazynami</h2>
+
+      <input id="nick" placeholder="Nick" maxlength="16">
+      <input id="password" type="password" placeholder="Hasło">
+
+      <button id="loginButton">ZALOGUJ</button>
+      <button id="registerButton">STWÓRZ KONTO</button>
+
+      <p id="loginMessage"></p>
+    </div>
+  </div>
+
+  <div id="gameScreen" class="hidden">
+    <div id="topBar">
+      <span id="playerName">Gracz</span>
+      <span id="coins">🪙 0</span>
+      <span id="status">Łączenie...</span>
+    </div>
+
+    <div id="crosshair">+</div>
+
+    <div id="help">
+      WASD - ruch | Mysz - kamera | Klik - strzał | Spacja - skok
+    </div>
+
+    <div id="mobileControls">
+      <div id="joystick">
+        <div id="stick"></div>
+      </div>
+
+      <button id="fireButton">STRZAŁ</button>
+      <button id="jumpButton">SKOK</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="/client.js"></script>
+</body>
+</html>
