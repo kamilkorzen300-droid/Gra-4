@@ -1,0 +1,199 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#loginScreen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #101820, #354b59);
+  z-index: 10;
+}
+
+.loginBox {
+  width: min(90%, 380px);
+  padding: 30px;
+  text-align: center;
+  background: #202a32;
+  border: 2px solid #657786;
+  border-radius: 16px;
+}
+
+.loginBox h1 {
+  color: #ffb52e;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.loginBox h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #657786;
+  border-radius: 8px;
+  background: #101820;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.loginBox button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: #e99b20;
+  color: #171717;
+  font-size: 16px;
+}
+
+.loginBox button:last-of-type {
+  background: #475b6c;
+  color: white;
+}
+
+#loginMessage {
+  color: #ff7777;
+  min-height: 20px;
+}
+
+#gameScreen {
+  position: fixed;
+  inset: 0;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#topBar {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px black;
+  pointer-events: none;
+}
+
+#coins {
+  color: #ffd45a;
+}
+
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  text-shadow: 0 0 4px black;
+  pointer-events: none;
+}
+
+#help {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #0009;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#mobileControls {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#joystick {
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  width: 125px;
+  height: 125px;
+  border: 2px solid #ffffff80;
+  background: #ffffff20;
+  border-radius: 50%;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+#stick {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 34px;
+  top: 34px;
+  background: #ffffffa0;
+  border-radius: 50%;
+}
+
+#fireButton,
+#jumpButton {
+  position: absolute;
+  pointer-events: auto;
+  color: white;
+  background: #d33b31cc;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  right: 25px;
+  bottom: 55px;
+  touch-action: none;
+}
+
+#jumpButton {
+  width: 65px;
+  height: 65px;
+  right: 115px;
+  bottom: 145px;
+  background: #3379cacc;
+}
+
+@media (pointer: coarse) {
+  #mobileControls {
+    display: block;
+  }
+
+  #help {
+    display: none;
+  }
+}
